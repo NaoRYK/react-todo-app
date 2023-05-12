@@ -13,26 +13,35 @@ import './App.css';
 
 const defaultTodos = [
 
-  {text: 'Jugar Lol', completed : false},
-  {text: 'mimir', completed : true},
-  {text: 'mimir2', completed : true},
-  {text: 'mimir3', completed : true},
-  {text: 'Jugar MC', completed : false},
-  {text: 'Jugar MC2', completed : false},
-  {text: 'mimir13', completed : true},
-  {text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod', completed : false},
-  {text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mana aliqua. Ut enim ad minim veniam, quis nostrud', completed : false},
+  {text: 'Crear mi primer ToDo', completed : false},
+
 
   
 ];
 
 
-localStorage.setItem('TODOS_v1', defaultTodos)
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem('TODOS_V1');
 
 
 function App() {
+  let parsedTodos;
 
-  const [todos,setTodos] = React.useState(defaultTodos);
+  const localStorageTodos = localStorage.getItem('TODOS_V1')
+
+  if (!localStorageTodos) {
+    localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos))
+    parsedTodos=[];
+    
+  }
+  else{
+
+    parsedTodos = JSON.parse(localStorageTodos);
+
+
+  }
+
+  const [todos,setTodos] = React.useState(parsedTodos);
 
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
@@ -42,6 +51,13 @@ function App() {
 
   const searchedTodos = todos.filter( (todo) => todo.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
 
+
+  const saveTodos = (newTodos) =>{
+
+    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos))
+    setTodos(newTodos);
+
+  }
   const completeTodo = (text) =>{
 
     const newTodos = [...todos];
@@ -51,7 +67,7 @@ function App() {
 
     newTodos.splice(newTodos.length, newTodos.length +1, newTodos[todoIndex])
     newTodos.splice(todoIndex,1)
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   const deleteTodo = (text) =>{
@@ -59,7 +75,7 @@ function App() {
     const todoIndex = newTodos.findIndex((todo)=> todo.text === text);
 
     newTodos.splice(todoIndex,1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   return (
     <React.Fragment>
