@@ -1,0 +1,31 @@
+
+#createTodo-div{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button{
+    color: white;
+    padding: 1.8rem;
+    border: solid 2px;
+    background-color: blueviolet;
+    border-color: blueviolet;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px white;
+    transition: all ease 0.2s;
+    
+}
+button:active{
+    color: blueviolet;
+    background-color: white;
+    box-shadow: 0px 0px 25px blueviolet;
+    transform: scale(.9);
+}
+button:hover{
+    cursor: pointer;
+}
+.createTodoI{
+    font-size: 3rem;
+}

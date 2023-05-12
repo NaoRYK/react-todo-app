@@ -1,0 +1,40 @@
+
+
+#todo-list{
+    display: grid;
+    align-content: center;
+    margin-top: 3rem;
+    height: 56vh;
+    justify-content: center;
+}
+ul{
+
+    background-color: var(--Degrade2);
+    padding: 2rem;
+    min-height: 41rem;
+
+  
+   
+    
+
+    margin-top: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 1px white;
+
+    width: 32rem;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(min-content, auto);
+    align-content: start;
+    justify-content: center;
+    
+    overflow-y: scroll;
+
+    overflow-x: none;
+    gap: 2rem;
+
+
+
+    
+}
