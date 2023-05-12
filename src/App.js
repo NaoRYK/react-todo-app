@@ -27,6 +27,8 @@ const defaultTodos = [
 ];
 
 
+localStorage.setItem('TODOS_v1', defaultTodos)
+
 
 function App() {
 
