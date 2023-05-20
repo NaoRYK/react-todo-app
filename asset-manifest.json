@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/NaoRYK/react-todo-app/tree/main/static/css/main.64f2feeb.css",
-    "main.js": "/NaoRYK/react-todo-app/tree/main/static/js/main.474759b6.js",
-    "index.html": "/NaoRYK/react-todo-app/tree/main/index.html",
-    "main.64f2feeb.css.map": "/NaoRYK/react-todo-app/tree/main/static/css/main.64f2feeb.css.map",
-    "main.474759b6.js.map": "/NaoRYK/react-todo-app/tree/main/static/js/main.474759b6.js.map"
+    "main.css": "/react-todo-app/static/css/main.64f2feeb.css",
+    "main.js": "/react-todo-app/static/js/main.474759b6.js",
+    "index.html": "/react-todo-app/index.html",
+    "main.64f2feeb.css.map": "/react-todo-app/static/css/main.64f2feeb.css.map",
+    "main.474759b6.js.map": "/react-todo-app/static/js/main.474759b6.js.map"
   },
   "entrypoints": [
     "static/css/main.64f2feeb.css",
