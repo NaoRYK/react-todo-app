@@ -1,8 +1,9 @@
 import "./TodoSearch.css"
 import React from "react"
-function TodoSearch({searchValue,setSearchValue}){
+import { TodoContext } from "../../TodoContext/TodoContext"
+function TodoSearch(){
 
-    console.log(searchValue)
+    const {setSearchValue, searchValue} = React.useContext(TodoContext)
     return(
 
         <div id="todo-search">

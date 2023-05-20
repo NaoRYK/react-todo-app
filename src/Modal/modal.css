@@ -1,0 +1,65 @@
+
+#modal-container{
+    position: absolute;
+    display: flex;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.521);
+    align-items: center;
+    justify-content: center;
+
+}
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 40%;
+    height: 35rem;
+
+    background: rgb(35,40,99);
+    background: linear-gradient(180deg, rgb(31, 37, 99) 0%, rgb(65, 29, 107) 100%);
+    border: solid 2px white;
+    border-radius: 4rem;
+}
+
+.modal form{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal label{
+
+    text-align: center;
+    align-self: flex-start;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.modal form input{
+    margin-top: 5rem;
+    width: 80%;
+}
+
+#modal-buttons{
+    margin-top: 6rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+#modal-buttons button{
+    font-size: 2.6rem;
+    margin-inline: 30%;
+}
+.confirm-todo{
+
+}
+.close-modal{
+   
+}
