@@ -21,7 +21,7 @@ function useLocalStorage(itemName, initialValue) {
 
         } else {
           parsedItems = JSON.parse(localStorageItems);
-          setItems(initialValue);
+          setItems(parsedItems);
 
         }
   

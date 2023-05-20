@@ -42,6 +42,8 @@
 }
 
 .modal form input{
+    font-weight:bolder;
+    font-size: 2rem;
     margin-top: 5rem;
     width: 80%;
 }
